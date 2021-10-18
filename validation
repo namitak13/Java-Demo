@@ -1,0 +1,161 @@
+add manager-
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Add Manager Details</h1>
+         <form action="index.html" method="post" class="was-validated">
+        <fieldset>
+          <label for="username">Manager Username</label>
+          <input type="text" class="form-control is-valid" id="username" name="username" required autofocus>
+          <div class="valid-feedback"></div>
+           <div class="invalid-feedback"></div>
+          
+          <label for="password">Manager Password</label>
+          <input type="text" class="form-control is-valid" id="password" name="password" required autofocus>
+          <div class="valid-feedback"></div>
+           <div class="invalid-feedback"></div>
+          
+            <button type="submit">Submit</button>
+       </fieldset>
+ </form>
+ </body>
+ 
+ addBatches-
+ 
+   <form action="index.html" method="post" class="was-validated">
+        
+        <h1>Add Batches</h1>
+        
+        <fieldset>
+        
+          <label for="sports">Select Sports:</label>
+          <select id="sports" name="sports_name" required>
+              <option value="swimming">Swimming</option>
+              <option value="badminton">Badminton</option>
+              <option value="vollyball">Volly ball</option>
+              <option value="cricket">Cricket</option>
+              <option value="football">Football</option>
+              <option value="tennis">Tennis</option>
+          </select>
+          
+          <label for="fees">Fees:</label>
+          <input type="text" class="form-control is-valid" id="fees" name="fees" required autofocus>
+          <div class="valid-feedback"></div>
+           <div class="invalid-feedback"></div>
+          
+          <label for="start_time">Start Time:</label>
+          <input type="time" class="form-control is-valid" id="start_time" name="start_time" required autofocus>
+          <div class="valid-feedback"></div>
+           <div class="invalid-feedback"></div>
+          
+          <label for="end_time">End Time:</label>
+          <input type="time" class="form-control is-valid" id="end_time" name="end_time" required autofocus>
+          <div class="valid-feedback"></div>
+           <div class="invalid-feedback"></div>
+
+          <label for="start_date">End Time:</label>
+          <input type="date" class="form-control is-valid" id="start_date" name="start_date" required autofocus>
+          <div class="valid-feedback"></div>
+           <div class="invalid-feedback"></div>
+        
+       </fieldset>
+          
+        <button type="submit">Submit</button>
+        
+      </form>
+      
+    addSports-
+    <h1>Add Sports</h1>
+	  <form action="index.html" method="post" class="was-validated">
+        <fieldset>
+          <label for="sport_name">Sport Name:</label>
+          <input type="text" class="form-control is-valid" placeholder="Enter Sport" id="sport_name" name="sport_name" required autofocus>
+           <div class="valid-feedback"></div>
+           <div class="invalid-feedback"></div>
+          <button id="button" type="submit">Submit</button>
+         </fieldset> 
+        </form>
+        
+      Login
+      <form id="form" class="was-validated">
+                     <div class="mb-3" id="unameCl">
+                    <label for="InputName" class="form-label fw-bold">Username*</label>
+                    <input type="text" name="username"class="form-control is-valid" id="InputUame" aria-describedby="unameHelp"
+                        placeholder="John Doe" autofocus required />
+                    <div class="valid-feedback"></div>
+       			    <div class="invalid-feedback"></div>
+                    </div>
+                    
+                    
+
+                    <div class="mb-5">
+                        <label for="InputPassword1" class="form-label fw-bold">Password* </label>
+                        <input type="password" class="form-control is-valid" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="8"  id="InputPassword1"
+                            placeholder="Password should be in minimum 8 character, lowercase, uppercase, numbers"autofocus required />
+                      <div class="valid-feedback"></div>
+       			    <div class="invalid-feedback"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">Submit</button>
+                </form>
+                
+                
+              Registration-
+               <form id="form" action="RegistrationController" method="post" class="was-validated">
+                <div class="mb-3" id="fnameCl">
+                    <label for="InputName" class="form-label fw-bold">Firstname*</label>
+                    <input type="text" name="firstname" class="form-control is-valid" id="InputFname" aria-describedby="fnameHelp"
+                        placeholder="John" autofocus required />
+                    <div class="valid-feedback"></div>
+       			    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3" id="lnameCl">
+                    <label for="InputName" class="form-label fw-bold">Lastname*</label>
+                    <input type="text" name="lastname" class="form-control is-valid" id="InputLname" aria-describedby="lnameHelp"
+                        placeholder="Doe" autofocus required />
+                    <div class="valid-feedback"></div>
+       			    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3" id="emailCl">
+                    <label for="InputEmail1" class="form-label fw-bold">Email address*</label>
+                    <input type="email" name="email" class="form-control is-valid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$"  id="InputEmail1" aria-describedby="emailHelp"
+                        placeholder="johndoe@gmail.com" autofocus required />
+                    <div id="emailHelp" class="form-text">
+                        We'll never share your email with anyone else.
+                    </div>
+                    <div class="valid-feedback"></div>
+       			    <div class="invalid-feedback"></div>
+                </div>
+                
+                <div class="mb-3" id="unameCl">
+                    <label for="InputName" class="form-label fw-bold">Username*</label>
+                    <input type="text" name="username" class="form-control is-valid"  id="InputUame" aria-describedby="unameHelp"
+                        placeholder="John Doe" autofocus required />
+                    <div class="valid-feedback"></div>
+       			    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="InputPassword1" class="form-label fw-bold">Password*</label>
+                    <input type="password" name="password" class="form-control is-valid"  id="InputPassword"
+                        placeholder="Password should be in minimum 8 character" autofocus required />
+                    <div class="valid-feedback"></div>
+       			    <div class="invalid-feedback"></div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary w-100 mb-4 mt-4">
+                    Register
+                </button>
+            </form>
