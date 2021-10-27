@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h2>Book Management System</h2><br><br>
+<a href="add"> Add Books</a>
+<br><br>
+<form action="#" th:action="@{/search}" method="post" >
+Search for a Book : 
+<input type="text" name="title">
+<button type="submit">Search</button>
+</form>
+<br><br>
+	<h4>Book Details</h4>
+<table border="2">
+<tr>
+<th>Book Id</th>
+<th>Book Name</th>
+<th>Book Publisher</th>
+<th>Action</th>
+</tr>
+
+<tr th:each="book : *{bookList}">
+
+ <td th:text='${book.bookId}'></td>
+<td th:text='${book.title}'></td>
+<td th:text='${book.publisher}'></td>
+<td th:text='${book.authors}'>
+	<ul>
+		<li></li>
+	</ul>
+</td>
+<td><a th:href="@{/edit/{id}(id=${book.bookId})}">Edit</a>/<a th:href="@{/delete/{id}(id=${book.bookId})}" >Delete</a></td>
+</tr>
+
+</table>
+</body>
+</html>
