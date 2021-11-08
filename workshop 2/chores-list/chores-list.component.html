@@ -1,0 +1,54 @@
+<div class="chores_group">
+<h2>Yesterday's chores</h2>
+<ul *ngFor="let chore of yesterdayChores">
+    <li>{{chore}}</li>
+</ul>
+<hr>
+<h2>Today's chores</h2>
+<ul *ngFor="let chore of todayChores">
+    <li>{{chore}}</li>
+</ul>
+<hr>
+<h2>Tomorrow's chores</h2>
+<ul *ngFor="let chore of tomorrowChores">
+    <li>{{chore}}</li>
+</ul>
+<hr>
+</div>
+
+
+<p style="color:  green;" *ngIf = 'chores.length > finishedChores.length'>Work Harder</p>
+<div class="chores">
+<h2>Chores</h2>
+<ul *ngFor="let chore of chores">
+    <li>{{chore}}</li>
+</ul>
+</div>
+<hr>
+
+<div class="done">
+<h2>Done Chores</h2>
+<ul *ngFor="let chore of finishedChores">
+    <li>{{chore}}</li>
+</ul>
+</div>
+
+<div class="allowance">
+
+<div *ngIf="chores.length == 0 || finishedChores.length >= chores.length + 3 ; else ptag">
+    <img [src] = 'imageURL'>
+</div>
+<ng-template #ptag>
+    <p>No allowance yet</p>
+ </ng-template>
+
+ <h1 *ngIf="chores.length == 0 || finishedChores.length >= 4 ; else elsePart">
+    Ice cream Treat !!
+ </h1>
+ <ng-template #elsePart>
+     <h3>To earn an ice cream treat :</h3>
+    <p>The chores list must be empty</p>
+    <p>The done list must have more than 4 items</p>
+ </ng-template>
+
+</div>

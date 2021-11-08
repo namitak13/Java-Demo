@@ -1,0 +1,31 @@
+<h2>Movies to Watch</h2>
+<ol *ngFor='let movie of movies; let i=index'>  
+   <div class="card">
+      <div class="card-body">
+         <img class="card-img-top" style="height: 350px;" [src]="movie.image" alt="Card image cap">
+         <div class="card-text">
+            {{movie.name}}
+         </div>
+         <div class="card-text">
+            {{movie.description}}
+         </div>
+         <button class="btn btn-success" (click) = "add(movie)">Add To Watched List</button>
+      </div>
+   </div>
+  
+</ol>
+
+<h2>Watched Movies</h2>
+<ol *ngFor='let movie of watchedMovies; let i=index'>  
+   <div class="card">
+      <div class="card-body">
+         <img class="card-img-top" style="height: 350px;" [src]="movie.image" alt="Card image cap">
+         <div class="card-text">
+            {{movie.name}}
+         </div>
+         <div class="card-text">
+            {{movie.description}}
+         </div>
+      </div>
+   </div>
+</ol>
