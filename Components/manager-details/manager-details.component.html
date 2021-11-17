@@ -1,0 +1,59 @@
+
+<div class="row">
+<div class="col-sm-2">
+    <app-admin-dash></app-admin-dash>
+</div>
+
+<div class="col-sm-8">
+<div class="center">
+    <div class="container-lg">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <h2>
+                            <b>	Manager Details</b>
+                            </h2>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-info add-new">
+                            <a style="color:white" href="admin?action=managerReg">	<i class="fa fa-plus"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>Manager Name</th>
+                            <th>Sport Name</th>
+                            <th>Hiredate</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        <tr *ngFor="let m of manager" >
+                            <td >{{m.managerName}}</td>
+                            <td >{{m.sportName}}</td>
+                            <th >{{m.hiredate | date:'dd-MM-y'}}</th>
+                            <td style="display:none" ></td>
+                            <td><a class="add" title="add" data-toggle="tooltip"><i
+                                    class="material-icons">&#xE03B;</i></a> 
+                                <a  class="edit"
+                                title="Edit" data-toggle="tooltip"><i
+                                    class="material-icons">&#xE254;</i></a> 
+                                <a class="delete" href="admin?action=managerRemove&managerId=${itr.userId}"
+                                title="Delete"><i class="material-icons">&#xE872;</i></a>
+                                
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
