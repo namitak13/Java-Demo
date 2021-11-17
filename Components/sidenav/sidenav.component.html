@@ -1,0 +1,26 @@
+<mat-toolbar class="dashboard">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <h1>Dashboard</h1>
+      <span class="menu-spacer"></span>
+    </mat-toolbar-row> 
+  </mat-toolbar>
+
+  <mat-sidenav-container style=" background-color: #22303C;">
+    <mat-sidenav #sidenav class="navList">
+      <mat-nav-list>    
+        <a class="navItems" mat-list-item [routerLink]="'../navbar'"> Home </a>
+        <a class="navItems" mat-list-item [routerLink]="'../manager-details'"> Manager List </a>
+        <a class="navItems" mat-list-item [routerLink]="'../user-details'"> User Logs </a>
+        <a class="navItems" mat-list-item [routerLink]="'../sports-details'"> Sports </a>
+        <a class="navItems" mat-list-item [routerLink]="'../profile-dets'"> Profile </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh" >
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

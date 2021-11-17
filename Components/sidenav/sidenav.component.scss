@@ -1,0 +1,21 @@
+.dashboard{
+    background-color: #22303C;
+    color: white;
+}
+
+.navList{
+    background-color: #11101D;
+    padding: 3px 25px;
+}
+
+.navItems{
+    color: white;
+}
+.navItems:hover{
+    background-color: #FFF ;
+    color: black;
+    border-radius: 10px;
+}
+mat-sidenav{
+    width: 250px;
+}
